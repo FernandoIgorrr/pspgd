@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link type="text/css" rel="stylesheet" href="{% static '/css/bootstrap@5.3.3.min.css' %}"/> 
+    <link type="text/css" rel="stylesheet" href="{% static '/css/bootstrap@5.3.3.darkly.min.css' %}"/>
+
+    <script src="{% static '/js/kit.fontawesome.9ad3956135.js' %}"></script>
+
+    <title>Bioinformatics</title>
+  </head>
+  <body>
+    {% include "navbar.html" %}
+    {% include "navtabs.html" %}
+
+    <script src="{% static '/js/bootstrap@5.3.3.bundle.min.js' %}"></script>
+</body>
+</html>

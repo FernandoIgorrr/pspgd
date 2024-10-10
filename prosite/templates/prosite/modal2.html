@@ -1,0 +1,78 @@
+<div
+class="modal fade"
+id="infoModal2"
+tabindex="-1"
+aria-labelledby="infoModalLabel"
+aria-hidden="true"
+>
+<div class="modal-dialog modal-lg">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="infoModalLabel">Informações</h5>
+      <button
+        type="button"
+        class="btn-close"
+data-bs-dismiss="modal"
+        aria-label="Close"
+      ></button>
+    </div>
+<div class="modal-body">
+      <h3 style="text-align: justify">
+        Modelos de pontuação de conservação
+</h3>
+
+      <p style="text-align: justify">
+        <strong>A matriz BLOSUM</strong> (<strong>BLO</strong>cks
+        of <strong>A</strong>mino <strong>A</strong>cid
+        <strong>SU</strong>bstitution <strong>M</strong>atrix) é
+        uma matriz de substituição usada para o alinhamento de
+        sequências de proteínas. Matrizes BLOSUM são usadas para
+        pontuar alinhamentos entre sequências de proteínas
+        divergentes. Elas são baseadas em alinhamentos locais. Ela
+        atribui pontuações a pares de aminoácidos com base na
+        frequência com que ocorrem juntos em alinhamentos de
+        proteínas homólogas.
+      </p>
+
+      <p style="text-align: justify">
+        Para usar a matriz BLOSUM62 na avaliação da conservação de
+        alinhamentos de proteínas, você segue estes passos:
+      </p>
+
+      <p style="text-align: justify">
+        <strong>1. Alinhamento de sequências:</strong> Primeiro,
+        você alinha as sequências de proteínas que deseja comparar
+        usando um algoritmo como o BLAST ou o algoritmo de
+        alinhamento múltiplo de sequências.
+      </p>
+
+      <p style="text-align: justify">
+        <strong>2. Atribuição de pontuações:</strong> Então, para
+        cada posição no alinhamento, você olha para os aminoácidos
+        correspondentes nas diferentes sequências alinhadas.
+        Usando a matriz BLOSUM62, você atribui uma pontuação a
+        esse par de aminoácidos. Pontuações mais altas indicam uma
+        maior conservação evolutiva.
+      </p>
+
+      <p style="text-align: justify">
+        <strong>3. Avaliação da conservação:</strong> Com base nas
+        pontuações atribuídas, você pode determinar quais posições
+        no alinhamento são mais conservadas (ou seja, têm
+        aminoácidos mais semelhantes entre as sequências) e quais
+        são menos conservadas.
+      </p>
+    </div>
+    <div class="modal-footer">
+      <button
+        type="button"
+        class="btn btn-secondary"
+        data-bs-dismiss="modal"
+      >
+        Fechar
+      </button>
+    </div>
+  </div>
+</div>
+</div>
+</div>

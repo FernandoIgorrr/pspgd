@@ -1,0 +1,55 @@
+<h1>{{ title }}</h1>
+<p>{{ sub_title}}</p>
+<form method="POST" enctype="multipart/form-data">
+  {% csrf_token %}
+  <div class="mb-3">
+    <button
+      type="button"
+      class="btn"
+      data-bs-toggle="modal"
+      data-bs-target="#infoModal1"
+      title="Informações"
+    >
+      <i class="fas fa-info-circle" style="color: #d62e74; font-size: 25px"></i>
+    </button>
+    <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+      {% for id, choice in form.score_model_conservation.field.choices %}
+        {% comment %} <input type="radio" class="btn-check" name="score_model_conservation" id="btn-radio {{ forloop.counter}}" value="{{ id }}" autocomplete="off"> {% endcomment %}
+        <input type="radio" class="btn-check" name="btnradio" id="btnradio{{ forloop.counter }}" autocomplete="off" value="{{ id }}" checked="">
+        <label class="btn btn-outline-primary" for="btnradio{{ forloop.counter }}">{{ choice }}</label>
+      {% endfor %}
+    </div>
+
+    <button
+      type="button"
+      class="btn"
+      data-bs-toggle="modal"
+      data-bs-target="#infoModal2"
+      title="Informações"
+    >
+      <i class="fas fa-info-circle" style="color: #d62e74; font-size: 25px"></i>
+    </button>
+
+
+    <div class="d-flex justify-content-center align-items-center mb-3">
+      <button
+        type="button"
+        class="btn"
+        data-bs-toggle="modal"
+        data-bs-target="#infoModal3"
+        title="Informações"
+      >
+        <i class="fas fa-info-circle" style="color: #d62e74; font-size: 25px"></i>
+      </button>
+      <label for="xthreshold"><strong>X-Threshold:</strong></label>
+      {{ form.xthreshold }}
+    </div>
+    <div class="d-flex justify-content-center mb-3">
+      {{ form.fasta_file }}
+    </div>
+  </div>
+</form>
+
+{% include  "prosite/modal1.html" %}
+{% include  "prosite/modal2.html" %}
+{% include  "prosite/modal3.html" %}
